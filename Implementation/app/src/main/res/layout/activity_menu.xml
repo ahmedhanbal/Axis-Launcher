@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This is an Android XML layout file.
+  I've changed NestedScrollView to ScrollView, which is a standard component.
+  I've also replaced all <View> placeholders with <ImageView>.
+
+  You will need to create placeholder drawables in your 'drawable' folder
+  for this layout to display correctly in the preview, e.g.,:
+  - @drawable/ic_placeholder_notification
+  - @drawable/ic_placeholder_settings
+  - @drawable/ic_placeholder_search
+  - @drawable/ic_placeholder_filter
+  - @drawable/ic_placeholder_cloud
+  - @drawable/ic_placeholder_check
+  - @drawable/ic_placeholder_home
+  - @drawable/ic_placeholder_apps
+  - @drawable/ic_placeholder_profile
+
+  You still need to define the background drawables mentioned
+  (e.g., @drawable/rounded_search_bg, @drawable/gradient_card_bg).
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header: Good Morning -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Morning"
+                    android:textSize="28sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textSize="16sp"
+                    android:textColor="#555555" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <!-- Placeholder for Notification Icon -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_placeholder_notification"
+                    android:contentDescription="Notifications"
+                    android:background="@drawable/icon_placeholder_bg"
+                    android:layout_marginEnd="10dp"/>
+
+                <!-- Placeholder for Settings Icon -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_placeholder_settings"
+                    android:contentDescription="Settings"
+                    android:background="@drawable/icon_placeholder_bg" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_search_bg"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="25dp">
+
+            <!-- Placeholder for Search Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_placeholder_search"
+                android:contentDescription="Search Icon"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search apps, contacts..."
+                android:background="@null"
+                android:inputType="text"
+                android:imeOptions="actionSearch"/>
+
+            <!-- Placeholder for Filter Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_placeholder_filter"
+                android:contentDescription="Filter Icon"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <!-- Top Apps Section (Phone, Messages, etc.) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginBottom="25dp">
+
+            <!-- App Placeholder 1 (Phone) -->
+            <include layout="@layout/app_icon_placeholder" android:id="@+id/app_phone"/>
+            <!-- App Placeholder 2 (Messages) -->
+            <include layout="@layout/app_icon_placeholder" android:id="@+id/app_messages"/>
+            <!-- App Placeholder 3 (Camera) -->
+            <include layout="@layout/app_icon_placeholder" android:id="@+id/app_camera"/>
+            <!-- App Placeholder 4 (Calendar) -->
+            <include layout="@layout/app_icon_placeholder" android:id="@+id/app_calendar"/>
+
+        </LinearLayout>
+
+        <!-- Your Apps Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Apps"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All >"
+                android:textSize="14sp"
+                android:textColor="#007AFF"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <!-- Your Apps Grid -->
+        <!-- In a real app, this would be a GridLayout or RecyclerView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginBottom="15dp">
+
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_maps"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_youtube"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_settings"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_gallery"/>
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginBottom="15dp">
+
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_music"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_files"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_clock"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_notes"/>
+            </LinearLayout>
+
+            <!-- Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginBottom="25dp">
+
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_gmail"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_chrome"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_playstore"/>
+                <include layout="@layout/app_icon_placeholder" android:id="@+id/app_drive"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Cloud Status Card -->
+        <!-- This would use a CardView in a real app -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_card_bg"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Placeholder for Cloud Icon -->
+            <ImageView
+                android:id="@+id/cloud_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_placeholder_cloud"
+                android:contentDescription="Cloud Status Icon"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/cloud_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cloud Status"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_toEndOf="@id/cloud_icon"/>
+
+            <!-- Placeholder for Checkmark Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_placeholder_check"
+                android:contentDescription="Synced"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/cloud_title"/>
+
+            <TextView
+                android:id="@+id/sync_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All synced"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_below="@id/cloud_title"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last sync: 2 minutes ago"
+                android:textColor="#E0E0E0"
+                android:textSize="14sp"
+                android:layout_below="@id/sync_status"
+                android:layout_marginTop="2dp"/>
+
+        </RelativeLayout>
+
+        <!-- Bottom Navigation Placeholder -->
+        <!-- This is often a separate component like BottomNavigationView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:background="#F5F5F5"
+            android:gravity="center_vertical">
+
+            <!-- Nav Item 1: Home -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_placeholder_home"
+                    android:contentDescription="Home"
+                    android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="#007AFF"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Nav Item 2: Apps -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_placeholder_apps"
+                    android:contentDescription="Apps"
+                    android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apps"
+                    android:textColor="#888888"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Nav Item 3: Profile -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_placeholder_profile"
+                    android:contentDescription="Profile"
+                    android:layout_marginBottom="44dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="#888888"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<!-- res/values/dimens.xml -->
+<resources>
+    <!-- App Icon Size -->
+    <dimen name="app_icon_size">80dp</dimen>
+
+    <!-- App Icon Text Size -->
+    <dimen name="app_icon_text_size">16sp</dimen>
+
+    <!-- Optional: If you want to adjust margins or padding globally -->
+    <dimen name="icon_margin">8dp</dimen>
+</resources>

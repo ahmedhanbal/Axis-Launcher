@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Mode Color Palette -->
+    
+    <!-- Base Palette - Dark Variants -->
+    <color name="primary">#BB86FC</color>
+    <color name="primary_dark">#6200EE</color>
+    <color name="accent">#CF6679</color>
+    
+    <!-- Background Colors - Dark -->
+    <color name="background_light">#121212</color>
+    <color name="background_gray">#1E1E1E</color>
+    <color name="background_onboarding">#1A1A1A</color>
+    
+    <!-- Text Colors - Dark -->
+    <color name="text_primary">#E0E0E0</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_hint">#808080</color>
+    <color name="text_gray">#9CA3AF</color>
+    
+    <!-- Component Colors - Dark -->
+    <color name="card_background">#1F1F1F</color>
+    <color name="divider">#2C2C2C</color>
+    
+    <!-- Onboarding Colors - Dark -->
+    <color name="onboarding_blue">#1A237E</color>
+    <color name="onboarding_purple">#4A148C</color>
+    <color name="onboarding_green">#1B5E20</color>
+    
+    <!-- Profile & UI Gradients - Keep vibrant -->
+    <color name="gradient_blue_start">#667EEA</color>
+    <color name="gradient_purple_end">#764BA2</color>
+    <color name="green_accent">#10B981</color>
+    <color name="blue_icon">#60A5FA</color>
+    <color name="purple_icon">#A78BFA</color>
+    <color name="pink_icon">#F472B6</color>
+    <color name="orange_icon">#FBBF24</color>
+    <color name="red_icon">#F87171</color>
+    <color name="cloud_blue">#60A5FA</color>
+    <color name="card_white">#2C2C2C</color>
+    
+</resources>

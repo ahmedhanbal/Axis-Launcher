@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <View
+            android:id="@+id/iconBackground"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circle_shape"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/ivCategoryIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="Category Icon"
+            android:layout_centerInParent="true"
+            android:layout_alignStart="@id/iconBackground"
+            android:layout_alignTop="@id/iconBackground"
+            android:layout_alignEnd="@id/iconBackground"
+            android:layout_alignBottom="@id/iconBackground"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iconBackground"
+            android:layout_toStartOf="@id/ivArrow"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                android:id="@+id/tvCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Communication"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tvAppCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 apps"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

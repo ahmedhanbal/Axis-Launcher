@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/btnFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Add to Favorites"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@drawable/ic_placeholder_home"
+        android:drawablePadding="16dp"/>
+
+    <TextView
+        android:id="@+id/btnAppInfo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="App Info"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@drawable/ic_placeholder_settings"
+        android:drawablePadding="16dp"/>
+
+    <TextView
+        android:id="@+id/btnUninstall"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Uninstall"
+        android:textSize="16sp"
+        android:textColor="#D32F2F"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@android:drawable/ic_menu_delete"
+        android:drawablePadding="16dp"/>
+
+</LinearLayout>
